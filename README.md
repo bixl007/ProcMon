@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📟 ProcMon
 
-## Getting Started
+> **The heartbeat of your infrastructure, delivered straight to Discord.**
 
-First, run the development server:
+![Project Status](https://img.shields.io/badge/status-active-success.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚡ What is ProcMon?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**ProcMon** (Process Monitor) is a lightweight, full-stack observability solution designed for developers who need immediate visibility into their silent background tasks.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Whether you are running critical Cron jobs, deploying nightly builds, or managing server health, ProcMon acts as the bridge between your code and your communication channels. It listens for HTTP "pings" from your applications and instantly dispatches formatted alerts to your Discord server via Webhooks.
 
-## Learn More
+**No more checking logs manually. If it breaks, you'll know.**
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **Real-Time Discord Integration:** Turn silent HTTP requests into rich, actionable Discord notifications.
+* **Project-Based Isolation:** Organize your monitors into distinct projects with unique API keys.
+* **Secure API Handling:** Authenticated endpoints ensure only your authorized apps can trigger alerts.
+* **Event Logging:** Keep a historical audit trail of every ping, success, or failure.
+* **Modern Stack:** Built for performance using the T3-adjacent stack (Next.js, TypeScript, PostgreSQL).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Tech Stack
 
-## Deploy on Vercel
+**ProcMon** is engineered with robust, modern technologies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
+* **Language:** [TypeScript](https://www.typescriptlang.org/)
+* **Database:** [PostgreSQL](https://www.postgresql.org/) (managed via Prisma ORM)
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/) & [Shadcn UI](https://ui.shadcn.com/)
+* **Auth:** [Clerk](https://clerk.com/) (Optional/If implemented) or Custom
+* **Deployment:** Vercel / Docker compatible
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🏁 Getting Started
+
+Follow these steps to spin up your own instance of ProcMon.
+
+### Prerequisites
+
+* Node.js (v18+)
+* npm or pnpm
+* A PostgreSQL database URI
+
+### Installation
+
+1.  **Clone the Repository**
+    ```bash
+    git clone [https://github.com/yourusername/ProcMon.git](https://github.com/yourusername/ProcMon.git)
+    cd ProcMon
+    ```
+
+2.  **Install Dependencies**
+    ```bash
+    bun install
+    # or
+    npm install
+    # or
+    pnpm install
+    ```
+
+3.  **Environment Setup**
+    Create a `.env` file in the root directory and configure your keys:
+    ```env
+    DATABASE_URL="postgresql://user:password@localhost:5432/procmon"
+    # Add other necessary auth keys here
+    ```
+
+4.  **Database Migration**
+    Sync your Prisma schema with your database:
+    ```bash
+    npx prisma generate
+    npx prisma db push
+    ```
+
+5.  **Ignition**
+    Start the development server:
+    ```bash
+    npm run dev
+    ```
+    Open `http://localhost:3000` to view the dashboard.
+
+---
+
+## 📡 Usage
+
+Once your project is created in the dashboard, you will receive a unique **API Key** and **Project ID**. Use these to send pings from your scripts.
+
+
+
+### 🤝 Contributing
+
+Contributions make the open-source community an amazing place to learn, inspire, and create. Any contributions you make to **ProcMon** are greatly appreciated.
+
+1.  **Fork the Project**
+2.  **Create your Feature Branch**
+    ```bash
+    git checkout -b feature/AmazingFeature
+    ```
+3.  **Commit your Changes**
+    ```bash
+    git commit -m 'Add some AmazingFeature'
+    ```
+4.  **Push to the Branch**
+    ```bash
+    git push origin feature/AmazingFeature
+    ```
+5.  **Open a Pull Request**
+
+---
+
+### 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.<br>
+Built with ❤️
