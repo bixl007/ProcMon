@@ -114,11 +114,13 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
   
   /* Smooth scrolling */
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 }
 
