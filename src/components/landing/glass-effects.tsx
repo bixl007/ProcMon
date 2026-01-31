@@ -128,7 +128,7 @@ export const GlassCard = ({
   const variants = {
     light: "bg-white/30 backdrop-blur-xl border border-white/40 shadow-lg",
     dark: "bg-gray-900/40 backdrop-blur-xl border border-white/10 shadow-2xl",
-    neo: "bg-white dark:bg-gray-900 border-2 sm:border-4 border-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] sm:dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)]",
+    neo: "bg-white dark:bg-gray-900 border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] lg:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] lg:dark:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)]",
   }
 
   return (
@@ -229,14 +229,14 @@ export const NeoButton = ({
 
   const sizes = {
     sm: "px-3 py-1.5 sm:px-4 sm:py-2 text-sm",
-    md: "px-4 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base",
-    lg: "px-5 py-3 sm:px-8 sm:py-4 text-base sm:text-lg",
+    md: "px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base",
+    lg: "px-5 py-2.5 sm:px-6 sm:py-3 text-base sm:text-lg",
   }
 
   const variants = {
-    primary: "bg-brand-600 text-white border-2 sm:border-4 border-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] sm:dark:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:bg-brand-700",
-    secondary: "bg-yellow-400 text-black border-2 sm:border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:bg-yellow-500",
-    outline: "bg-transparent text-black dark:text-white border-2 sm:border-4 border-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] sm:dark:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:bg-black/5 dark:hover:bg-white/5",
+    primary: "bg-brand-600 text-white border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] hover:bg-brand-700",
+    secondary: "bg-yellow-400 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-yellow-500",
+    outline: "bg-transparent text-black dark:text-white border-2 border-black dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] hover:bg-black/5 dark:hover:bg-white/5",
   }
 
   const baseStyles = `
